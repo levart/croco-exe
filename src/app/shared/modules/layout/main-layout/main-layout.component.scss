@@ -1,0 +1,39 @@
+@import "/src/assets/scss/variables";
+
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .side-menu {
+    flex: initial;
+    background-color: var(--bg-side-menu);
+    width: 78px;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+    }
+
+    .navigation {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px
+    }
+  }
+
+  .content {
+    flex: 1 1 auto;
+
+    .header {
+      background-color: var(--bg-header);
+      height: 60px;
+    }
+  }
+
+
+}
