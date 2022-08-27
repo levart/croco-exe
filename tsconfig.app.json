@@ -3,7 +3,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@croco/core": ["src/app/core/index"],
+      "@croco/shared": ["src/app/shared/index"]
+    }
   },
   "files": [
     "src/main.ts",

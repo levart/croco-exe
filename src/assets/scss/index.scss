@@ -1,0 +1,18 @@
+@use "sass:meta";
+@import "variables";
+@import "fonts";
+
+
+:root {
+  --font-croco: #{meta.inspect($font-family-croco-sans-serif)};
+
+  --bg-body: #{$bg-body};
+  --bg-side-menu: #{$bg-side-menu};
+  --bg-header: #{$bg-header};
+
+  --primary: #{$primary-color};
+  --secondary: #{$secondary-color};
+  --accent: #{$accent-color};
+  --light: #{$light};
+
+}

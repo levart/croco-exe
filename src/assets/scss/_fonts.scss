@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+$font-path: "./fonts";
+/// @content Open Sans font declaration
+
+@font-face {
+  font-display: swap;
+  font-family: 'NeueCrocoSans';
+  src: local('Neue Croco Sans Medium'),
+  local('NeueCrocoSans-Medium'),
+  url('#{$font-path}/NeueCrocoSansMedium.ttf') format('truetype'),
+  url('#{$font-path}/NeueCrocoSansMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'NeueCrocoSans';
+  src: local('Neue Croco Sans Regular'),
+  local('NeueCrocoSans-Regular'),
+  url('#{$font-path}/NeueCrocoSansRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+$font-family-croco-sans-serif: -apple-system, BlinkMacSystemFont, "NeueCrocoSans", Roboto, sans-serif;
+
