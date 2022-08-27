@@ -22,6 +22,16 @@ describe('NavItemComponent', () => {
   });
 
   it('item not exist', () => {
-    expect(component).toBeFalse();
+    component.item = null;
+    expect(component).toBeTruthy();
+  });
+
+  it('item exist', () => {
+    component.item = {
+      title: 'SPORT',
+      icon: '/assets/media/icons/sport.svg',
+      url: ['/sport']
+    };
+    expect(component).toBeTruthy();
   });
 });

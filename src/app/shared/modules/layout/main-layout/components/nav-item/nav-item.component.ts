@@ -7,5 +7,5 @@ import {NavItem} from "../../nav-items";
   styleUrls: ['./nav-item.component.scss']
 })
 export class NavItemComponent {
-  @Input() item!: NavItem;
+  @Input() item?: NavItem | null;
 }
