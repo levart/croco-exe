@@ -6,9 +6,10 @@ import { SlotsComponent } from './slots.component';
 import { SliderModule } from '../../features';
 import { SlotService } from './services';
 import { SlotFilterItemComponent } from './components/slot-filter-item/slot-filter-item.component';
+import { SlotItemComponent } from './components/slot-item/slot-item.component';
 
 @NgModule({
-    declarations: [SlotsComponent, SlotFilterItemComponent],
+    declarations: [SlotsComponent, SlotFilterItemComponent, SlotItemComponent],
     imports: [CommonModule, SlotsRoutingModule, SliderModule],
     providers: [SlotService],
 })

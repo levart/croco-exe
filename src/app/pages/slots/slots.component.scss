@@ -4,7 +4,6 @@
     .container {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         gap: 8px;
         width: 100%;
 
@@ -42,6 +41,12 @@
                 height: 53px;
                 overflow: hidden;
             }
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat( auto-fill, minmax(217px, 1fr) );
+            gap: 12px;
         }
     }
 }

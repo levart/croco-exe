@@ -25,8 +25,8 @@
         </div>
     </div>
     <div class="games">
-        <pre>
-            {{ games | json }}
-        </pre>
+        <ng-container *ngFor="let game of games">
+            <cr-slot-item [item]="game"></cr-slot-item>
+        </ng-container>
     </div>
 </div>

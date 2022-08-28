@@ -39,6 +39,7 @@ export class SlotsComponent implements OnInit, OnDestroy {
     }
 
     categoryChoose(category: SlotCategory) {
+        this.selectedSlotProviders = null;
         this.selectedCategory = category;
         this.games = this.selectedCategory.games;
     }
