@@ -1,3 +1,32 @@
-<div style="height: 200vh">
-  <cr-slider></cr-slider>
+<div class="container">
+    <div class="slider">
+        <cr-slider image="assets/media/images/slider.png"></cr-slider>
+    </div>
+    <div class="filter">
+        <div class="categories">
+            <ng-container *ngFor="let category of categories">
+                <cr-slot-filter-item
+                    [name]="category.name"
+                    [count]="category.totalGames"
+                    icon="/assets/media/icons/slots.svg"
+                    [active]="!!(selectedCategory && selectedCategory.category === category.category)"
+                    (click)="categoryChoose(category)"
+                ></cr-slot-filter-item>
+            </ng-container>
+        </div>
+        <div class="providers">
+            <ng-container *ngFor="let item of slotProviders">
+                <cr-slot-filter-item
+                    [name]="item.name"
+                    [active]="!!(selectedSlotProviders && selectedSlotProviders._id === item._id)"
+                    (click)="providerChoose(item)"
+                ></cr-slot-filter-item>
+            </ng-container>
+        </div>
+    </div>
+    <div class="games">
+        <pre>
+            {{ games | json }}
+        </pre>
+    </div>
 </div>

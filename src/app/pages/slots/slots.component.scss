@@ -1,3 +1,47 @@
 :host {
-  width: 100%;
+    width: 100%;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+        width: 100%;
+
+        .slider {
+            width: 100%;
+        }
+
+        .filter {
+            min-height: 105px;
+            background-color: #1d242c;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+
+            .categories {
+                flex: inherit;
+                display: flex;
+                gap: 15px;
+                padding: 0 15px;
+                height: 53px;
+                align-items: flex-end;
+            }
+
+            .providers {
+                background-color: #272d36;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                flex: inherit;
+                display: flex;
+                gap: 15px;
+                padding: 0 15px;
+                line-height: 53px;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                height: 53px;
+                overflow: hidden;
+            }
+        }
+    }
 }
