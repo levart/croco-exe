@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SlotService } from './services';
-import { Observable, Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { SlotCategory } from './interfaces/slot-category';
 import { Game } from './interfaces/game';
 import { SlotProviders } from './interfaces/slot-providers';
@@ -20,6 +20,8 @@ export class SlotsComponent implements OnInit, OnDestroy {
     games: Game[] = [];
 
     sub$: Subject<any> = new Subject<any>();
+
+    providersExpanded = false;
 
     constructor(private slotService: SlotService) {}
 

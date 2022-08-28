@@ -6,9 +6,9 @@
 :root {
   --font-croco: #{meta.inspect($font-family-croco-sans-serif)};
 
-  --bg-body: #{$bg-body};
-  --bg-side-menu: #{$bg-side-menu};
-  --bg-header: #{$bg-header};
+  --dark: #{$dark};
+  --dark-2: #{$dark-2};
+  --dark-1: #{$dark-1};
 
   --primary: #{$primary-color};
   --secondary: #{$secondary-color};

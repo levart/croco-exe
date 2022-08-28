@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cr-casino',
-  templateUrl: './casino.component.html',
-  styleUrls: ['./casino.component.scss']
+    selector: 'cr-casino',
+    templateUrl: './casino.component.html',
+    styleUrls: ['./casino.component.scss'],
 })
-export class CasinoComponent  {
-
-}
+export class CasinoComponent {}

@@ -1,11 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cr-live',
-  templateUrl: './live.component.html',
-  styleUrls: ['./live.component.scss']
+    selector: 'cr-live',
+    templateUrl: './live.component.html',
+    styleUrls: ['./live.component.scss'],
 })
-export class LiveComponent {
-
-
-}
+export class LiveComponent {}

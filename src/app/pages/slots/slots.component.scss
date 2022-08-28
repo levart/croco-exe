@@ -14,7 +14,6 @@
         .filter {
             min-height: 105px;
             background-color: #1d242c;
-            border-radius: 5px;
             display: flex;
             flex-direction: column;
             justify-content: stretch;
@@ -33,17 +32,29 @@
 
             .providers {
                 background-color: #272d36;
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
                 flex: inherit;
 
-
                 .providers_more {
-                    padding: 17px 20px 13px;
+                    line-height: 53px;
+                    padding: 0 20px;
                     float: right;
                     background: transparent;
-                    color: #fff;
+                    font-family: var(--font-croco);
+                    font-size: 14px;
+                    color: var(--light);
                     cursor: pointer;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    img {
+                        transition: ease-in-out 300ms;
+                    }
+
+                    &.active {
+                        img {
+                            transform: rotate(180deg);
+                        }
+                    }
                 }
 
                 .providers_items {
@@ -55,13 +66,17 @@
                     flex-wrap: wrap;
                     height: 53px;
                     overflow: hidden;
+
+                    &.expanded {
+                        height: auto;
+                    }
                 }
             }
         }
 
         .games {
             display: grid;
-            grid-template-columns: repeat( auto-fill, minmax(210px, 1fr) );
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
             gap: 12px;
 
             .first {

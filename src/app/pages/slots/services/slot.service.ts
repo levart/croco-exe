@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { filter, flatMap, map, Observable, pluck, tap } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { BaseService } from '../../../core';
 import { ApiResponse } from '../../../core/interfaces';
 import { SlotCategory } from '../interfaces/slot-category';

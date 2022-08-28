@@ -15,8 +15,15 @@
             </ng-container>
         </div>
         <div class="providers">
-            <button class="providers_more">More</button>
-            <div class="providers_items">
+            <button
+                class="providers_more"
+                [ngClass]="{ active: providersExpanded }"
+                (click)="providersExpanded = !providersExpanded"
+            >
+                ნახე მეტი
+                <img src="assets/media/icons/arrow-down.svg" alt="arrow" class="see-more-btn__arrow" />
+            </button>
+            <div class="providers_items" [ngClass]="{ expanded: providersExpanded }">
                 <ng-container *ngFor="let item of slotProviders">
                     <cr-slot-filter-item
                         [name]="item.name"
