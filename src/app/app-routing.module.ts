@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './features/layout/main-layout/main-layout.component';
-import { SportRoutingModule } from './pages/sport/sport-routing.module';
 
 const routes: Routes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/slots',
+    },
     {
         path: '',
         component: MainLayoutComponent,
