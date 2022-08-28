@@ -25,8 +25,8 @@
         </div>
     </div>
     <div class="games">
-        <ng-container *ngFor="let game of games">
-            <cr-slot-item [item]="game"></cr-slot-item>
+        <ng-container *ngFor="let game of games; let first = first">
+            <cr-slot-item [ngClass]="{ first: first }" [item]="game"></cr-slot-item>
         </ng-container>
     </div>
 </div>
