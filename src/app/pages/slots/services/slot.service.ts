@@ -16,7 +16,9 @@ export class SlotService {
             .pipe(
                 map((response: ApiResponse<SlotCategory[]>) => response.data),
                 map((res: SlotCategory[]) => {
-                    return res.filter((f: SlotCategory) => f.platform !== 'mobile' && !f.group && f.group !== '');
+                    return res.filter(
+                        (f: SlotCategory) => f.platform !== 'mobile' && !f.group && f.group !== '' && f.totalGames > 1
+                    );
                 })
             );
     }

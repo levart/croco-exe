@@ -36,14 +36,26 @@
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
                 flex: inherit;
-                display: flex;
-                gap: 15px;
-                padding: 0 15px;
-                line-height: 53px;
-                align-items: flex-end;
-                flex-wrap: wrap;
-                height: 53px;
-                overflow: hidden;
+
+
+                .providers_more {
+                    padding: 17px 20px 13px;
+                    float: right;
+                    background: transparent;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                .providers_items {
+                    display: flex;
+                    gap: 15px;
+                    padding: 0 15px;
+                    line-height: 53px;
+                    align-items: flex-end;
+                    flex-wrap: wrap;
+                    height: 53px;
+                    overflow: hidden;
+                }
             }
         }
 

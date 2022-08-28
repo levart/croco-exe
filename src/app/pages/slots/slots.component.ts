@@ -38,12 +38,6 @@ export class SlotsComponent implements OnInit, OnDestroy {
             });
     }
 
-    categoryChoose(category: SlotCategory) {
-        this.selectedSlotProviders = null;
-        this.selectedCategory = category;
-        this.games = this.selectedCategory.games;
-    }
-
     getProviders() {
         this.slotService
             .getProviders()
@@ -62,14 +56,20 @@ export class SlotsComponent implements OnInit, OnDestroy {
             });
     }
 
-    ngOnDestroy(): void {
-        this.sub$.next(null);
-        this.sub$.complete();
+    categoryChoose(category: SlotCategory) {
+        this.selectedSlotProviders = null;
+        this.selectedCategory = category;
+        this.games = this.selectedCategory.games;
     }
 
     providerChoose(provider: SlotProviders) {
         this.selectedSlotProviders = provider;
         this.selectedCategory = null;
         this.getSlotByProvider(this.selectedSlotProviders.provider);
+    }
+
+    ngOnDestroy(): void {
+        this.sub$.next(null);
+        this.sub$.complete();
     }
 }
